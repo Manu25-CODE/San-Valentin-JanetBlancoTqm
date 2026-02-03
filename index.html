@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>¿Puedo ser tu San Valentín, Janet Blanco? 🤍</title>
+  <title>¿Puedo ser tu San Valentín, Janet Blanco? 💛</title>
   <style>
     body {
       margin: 0;
@@ -156,7 +156,7 @@
     <div class="heart">💘</div>
     <h1>
   ¿Puedo ser tu <span class="nowrap">San&nbsp;Valentín</span>,
-  <span class="jani">Janet Blanco 🤍</span>? 
+  <span class="jani">Janet Blanco 💛</span>? 
 </h1>
     <p>Solo preocúpate por lo que te pondrás; yo me encargo del resto preciosa 💘</p>
     <div class="firma">— Manu </div>
@@ -167,13 +167,30 @@
   </div>
 
   <script>
-    function accept() {
-      alert('Te adoro, gracias 💘✨');
+  function accept() {
+    alert('Te adoro, gracias 💘✨');
+  }
+
+  const mensajesNo = [
+    '¿Segura? pcm 🥺',
+    'Piénsalo bien va 💛',
+    'Ándale, di que sí va 🙁',
+    'Como es que sigues diciendo que no, pcm 😠',
+    'Janet blanco es la ultima vez (nah, se van a repetir las enteriores JAJAJAJAJJA 🙈'
+  ];
+
+  let intento = 0;
+
+  function reject() {
+    alert(mensajesNo[intento]);
+    intento++;
+
+    if (intento >= mensajesNo.length) {
+      intento = mensajesNo.length - 1; // se queda en el último
     }
-    function reject() {
-      alert('Di que si va ❤️');
-    }
-  </script>
+  }
+</script>
+
   <div class="hearts">
   <span>💛</span>
   <span>💖</span>
