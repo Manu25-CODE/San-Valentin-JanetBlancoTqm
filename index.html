@@ -72,12 +72,36 @@
     .nowrap {
   white-space: nowrap;
 }
+    .jani {
+  display: inline-block;
+  color: #ffe066;
+  font-weight: 600;
+  animation: pulseGlow 2.2s infinite;
+}
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(255, 224, 102, 0);
+  }
+  50% {
+    transform: scale(1.08);
+    text-shadow: 0 0 12px rgba(255, 224, 102, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(255, 224, 102, 0);
+  }
+}
   </style>
 </head>
 <body>
   <div class="card">
     <div class="heart">💘</div>
-    <h1>¿Puedo ser tu <span class="nowrap">San&nbsp;Valentín</span>, Jani? 💛</h1>
+    <h1>
+  ¿Puedo ser tu <span class="nowrap">San&nbsp;Valentín</span>,
+  <span class="jani">Jani</span>? 💛
+</h1>
+i? 💛</h1>
     <p>Solo preocúpate por lo que te pondrás; yo me encargo del resto preciosa 💘</p>
     <div class="buttons">
       <button class="yes" onclick="accept()">Sí 💛</button>
