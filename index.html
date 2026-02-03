@@ -103,7 +103,6 @@
   z-index: 0;
   pointer-events: none;
 }
-
    .firma {
   margin-top: 35px;   
   margin-bottom: 20px; 
@@ -161,36 +160,35 @@
     <p>Solo preocúpate por lo que te pondrás; yo me encargo del resto preciosa 💘</p>
     <div class="firma">— Manu </div>
     <div class="buttons">
+      <p id="mensajeFinal" style="display:none; margin-top:20px; font-size:1.1em;">
+      Ni modo, lo tomaré como un sí 💛</p>
       <button class="yes" onclick="accept()">Sí 💛</button>
       <button class="no" onclick="reject()">No 🙁</button>
     </div>
   </div>
-
   <script>
   function accept() {
     alert('Te adoro, gracias 💘✨');
   }
-
   const mensajesNo = [
     '¿Segura? pcm 🥺',
     'Piénsalo bien va 💛',
     'Ándale, di que sí va 🙁',
     'Como es que sigues diciendo que no, pcm 😠',
-    'Janet blanco es la ultima vez (nah, se van a repetir las enteriores JAJAJAJAJJA 🙈'
+    'Janet Blanco es la última vez 🙈'
   ];
-
   let intento = 0;
-
   function reject() {
-    alert(mensajesNo[intento]);
-    intento++;
-
-    if (intento >= mensajesNo.length) {
-      intento = mensajesNo.length - 1; // se queda en el último
+    if (intento < mensajesNo.length) {
+      alert(mensajesNo[intento]);
+      intento++;
+    }
+    if (intento === mensajesNo.length) {
+      document.getElementById('noBtn').style.display = 'none';
+      document.getElementById('mensajeFinal').style.display = 'block';
     }
   }
 </script>
-
   <div class="hearts">
   <span>💛</span>
   <span>💖</span>
