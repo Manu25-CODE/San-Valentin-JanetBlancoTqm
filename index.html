@@ -100,15 +100,6 @@
   font-style: italic;
   letter-spacing: 0.5px;
 }
-.hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-}
 .hearts::before,
 .hearts::after {
   content: "💛 💖 💕 💘 💗";
@@ -119,16 +110,7 @@
   animation: floatHearts 18s linear infinite;
   opacity: 0.25;
 }
-
-.hearts::after {
-  animation-delay: 9s;
-}
-
-@keyframes floatHearts {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
-}
-    .hearts {
+.hearts {
   position: fixed;
   top: 0;
   left: 0;
@@ -201,7 +183,6 @@
       alert('Di que si va ❤️');
     }
   </script>
-  <div class="hearts"></div>
   <div class="hearts">
   <span>💛</span>
   <span>💖</span>
